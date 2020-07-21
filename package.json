@@ -7,13 +7,56 @@
   "author": "Tim Kuminecz <tkuminecz@gmail.com>",
   "license": "MIT",
   "private": false,
+  "config": {
+    "port": "4500"
+  },
+  "scripts": {
+    "vercel": "vercel dev --listen $npm_package_config_port",
+    "build": "next build",
+    "dev": "next dev --port $npm_package_config_port",
+    "lint": "eslint --report-unused-disable-directives --ext=.js,.jsx,.ts,.tsx ./lib ./src ./pages",
+    "start": "next start",
+    "test": "yarn lint && yarn typecheck",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
+    "@apollographql/graphql-playground-html": "~1.6.26",
+    "accepts": "~1.3.7",
+    "apollo-server-core": "~2.16.0",
+    "apollo-server-types": "~0.5.1",
+    "cors": "~2.8.5",
+    "graphql": "~15.3.0",
+    "graphql-subscriptions": "~1.1.0",
+    "graphql-tools": "~6.0.14",
     "next": "~9.4.4",
-    "promisemon": "~1.0.4"
+    "promisemon": "~1.0.4",
+    "react": "~16.13.1",
+    "react-dom": "~16.13.1",
+    "subscriptions-transport-ws": "~0.9.17",
+    "type-is": "~1.6.18"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "~7.10.4",
+    "@babel/plugin-proposal-decorators": "~7.10.5",
     "@types/node": "~14.0.24",
+    "@types/react": "~16.9.43",
+    "@typescript-eslint/eslint-plugin": "~3.7.0",
+    "@typescript-eslint/parser": "~3.7.0",
+    "babel-plugin-transform-typescript-metadata": "~0.3.0",
     "eslint": "~7.5.0",
+    "eslint-config-airbnb-typescript": "~9.0.0",
+    "eslint-config-prettier": "~6.11.0",
+    "eslint-import-resolver-alias": "~1.1.2",
+    "eslint-plugin-babel": "~5.3.1",
+    "eslint-plugin-import": "~2.22.0",
+    "eslint-plugin-jest": "~23.18.0",
+    "eslint-plugin-jsx-a11y": "~6.3.1",
+    "eslint-plugin-prettier": "~3.1.4",
+    "eslint-plugin-react": "~7.20.3",
+    "eslint-plugin-react-hooks": "~4.0.8",
+    "prettier": "~2.0.5",
+    "tsconfig-paths-webpack-plugin": "~3.2.0",
     "typescript": "~3.9.7"
   }
 }
