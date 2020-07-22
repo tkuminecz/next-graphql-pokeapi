@@ -10,7 +10,7 @@ const bootstrap = async () => {
       ClassType<any>
     >,
   });
-  const server = new ApolloServer({ schema });
+  const server = new ApolloServer({ schema, introspection: true });
   const handleRequest = server.getRequestHandler({ baseUrl: '/api/graphql' });
   return { handleRequest };
 };
