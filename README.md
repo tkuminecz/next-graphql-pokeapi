@@ -1,2 +1,4 @@
 # next-graphql-pokeapi
-GraphQL frontend for PokeAPI built for Next.js
+POC GraphQL frontend for PokeAPI built for Next.js
+
+https://next-graphql-pokeapi.tim.vercel.app/
