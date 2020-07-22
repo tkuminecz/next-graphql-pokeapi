@@ -97,5 +97,6 @@ module.exports = {
     'no-void': 'off',
     'class-methods-use-this': 'off',
     'no-nested-ternary': 'off',
+    'max-classes-per-file': 'off'
   },
 };
